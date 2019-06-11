@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/cinema">
+
+    <TextView
+        android:id="@+id/poster"
+        android:layout_width="match_parent"
+        android:layout_height="290dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/interstellarposter"
+        android:gravity="center" />
+
+    <LinearLayout
+        android:id="@+id/layout_film"
+        android:layout_width="340dp"
+        android:layout_height="240dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/background_sub"
+        android:orientation="vertical"
+        android:layout_marginTop="91dp">
+
+        <TextView
+            android:id="@+id/movie_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="-3dp"
+            android:text="MovieTitle"
+            android:textSize="15dp"/>
+
+
+        <LinearLayout
+            android:id="@+id/film_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:layout_marginTop="2dp"/>
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="2dp"
+                android:src="@drawable/clock" />
+
+            <TextView
+                android:id="@+id/rating"
+                android:layout_marginTop="2dp"
+                android:layout_marginStart="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:textSize="15dp" />
+            <ImageView
+                android:layout_marginStart="1dp"
+                android:layout_width="20dp"
+                android:layout_height="25dp"
+                android:src="@drawable/rating"/>
+
+            <TextView
+                android:id="@+id/type"
+                android:layout_marginTop="2dp"
+                android:layout_marginStart="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:textSize="15dp" />
+            <ImageView
+                android:layout_marginStart="1dp"
+                android:layout_width="20dp"
+                android:layout_height="25dp"
+                android:src="@drawable/movie"/>
+        </LinearLayout>
+
+        <LinearLayout
+        android:id="@+id/genres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal">
+            <TextView
+                android:background="@drawable/tag"
+                android:id="@+id/genres1"
+                android:layout_marginStart="1dp"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:textSize="13dp"
+                android:text="Genre1"/>
+            <TextView
+                android:background="@drawable/tag"
+                android:id="@+id/genres2"
+                android:layout_marginStart="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="Genre2"
+                android:textSize="13dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/synopsis"
+            android:layout_marginTop="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sypnonis"
+            android:textSize="10dp"/>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_below="@+id/layout_film"
+        android:padding = "4dp"
+        android:id="@+id/date_select"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal">
+    </android.support.v7.widget.RecyclerView>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/show_time"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:layout_below="@+id/date_select"
+        android:layout_alignParentStart="true"
+        android:orientation="vertical"
+        android:padding="4dp"
+        android:scrollbars="none">
+    </android.support.v7.widget.RecyclerView>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:clickable="true"
+        android:id="@+id/button_activity"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="44dp"/>
+
+</RelativeLayout>

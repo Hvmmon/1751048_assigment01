@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="40dp"
+    android:layout_width="70dp"
+    android:orientation="vertical"
+    android:background="@drawable/button_available"
+    android:id="@+id/button_showdate"
+    android:layout_marginHorizontal="8dp">
+    <TextView
+        android:id="@+id/dWeek"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:autoSizeTextType="uniform"
+        android:paddingHorizontal="13dp"
+        android:text="Friday" />
+    <TextView
+        android:id="@+id/dMonth"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:autoSizeTextType="uniform"
+        android:paddingHorizontal="13dp"
+        android:gravity="center"
+        android:text="2"/>
+</LinearLayout>
